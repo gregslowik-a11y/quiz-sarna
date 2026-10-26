@@ -26,18 +26,12 @@
           ".validate": "newData.hasChildren(['0','1','2','3','4','5','6','7','8','9','10','11'])",
           "$i": {
             ".validate": "newData.isString() && newData.val().length >= 1 && newData.val().length <= 32"
-          },
-          "$other": {
-            ".validate": false
           }
         },
         "answers": {
           ".validate": "newData.hasChildren(['0','1','2','3','4','5','6','7','8','9','10','11'])",
           "$i": {
             ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 3"
-          },
-          "$other": {
-            ".validate": false
           }
         },
         "$other": {
