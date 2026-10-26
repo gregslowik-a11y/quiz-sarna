@@ -11,25 +11,25 @@
           ".validate": "newData.isString() && newData.val().length >= 2 && newData.val().length <= 24"
         },
         "score": {
-          ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 12"
+          ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 15"
         },
         "durationSeconds": {
           ".validate": "newData.isNumber() && newData.val() >= 0"
         },
         "questionCount": {
-          ".validate": "newData.val() === 12"
+          ".validate": "newData.val() === 15"
         },
         "submittedAt": {
           ".validate": "newData.isNumber()"
         },
         "questionIds": {
-          ".validate": "newData.hasChildren(['0','1','2','3','4','5','6','7','8','9','10','11'])",
+          ".validate": "newData.hasChildren(['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14'])",
           "$i": {
             ".validate": "newData.isString() && newData.val().length >= 1 && newData.val().length <= 32"
           }
         },
         "answers": {
-          ".validate": "newData.hasChildren(['0','1','2','3','4','5','6','7','8','9','10','11'])",
+          ".validate": "newData.hasChildren(['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14'])",
           "$i": {
             ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 3"
           }
