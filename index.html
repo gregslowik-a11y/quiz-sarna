@@ -11,30 +11,44 @@
     <header class="hero">
       <div class="eyebrow">LEŚNA WIEDZA • QUIZ KLASOWY</div>
       <h1>Quiz o sarnie</h1>
-      <p>5 pytań • jedna próba • powodzenia!</p>
+      <p>5 pytań • zdjęcia, tropy i leśne sytuacje • powodzenia!</p>
     </header>
     <section class="panel" id="entry">
       <h2>Dołącz do quizu</h2>
       <label for="nickname">Twój login lub pseudonim</label>
       <input id="nickname" maxlength="24" autocomplete="nickname" placeholder="Np. LeśnyOdkrywca">
       <button id="startBtn">Rozpocznij quiz</button>
-      <p class="hint">Każdy uczestnik rozwiązuje test na swoim telefonie. Nie wpisuj nazwiska ani innych prywatnych danych.</p>
+      <p class="hint">Wpisz przyjazny pseudonim. Nie podawaj nazwiska ani innych prywatnych danych.</p>
       <p id="entryError" class="error" role="alert"></p>
     </section>
     <section class="panel hidden" id="quizPanel">
       <div class="quiz-top"><span id="progress">Pytanie 1 z 5</span><span id="timer">00:00</span></div>
       <div class="progress"><div id="progressBar"></div></div>
+      <div class="question-tag" id="questionTag">Pytanie</div>
       <h2 id="questionText"></h2>
+      <figure id="questionFigure" class="question-figure hidden">
+        <img id="questionImage" alt="" loading="lazy">
+        <figcaption id="questionImageCaption"></figcaption>
+      </figure>
       <div id="answers" class="answers"></div>
-      <button id="nextBtn" disabled>Dalej</button>
+      <button id="checkBtn" disabled>Sprawdź odpowiedź</button>
+      <section id="feedbackBox" class="feedback-box hidden" aria-live="polite">
+        <h3 id="feedbackTitle"></h3>
+        <p id="feedbackText"></p>
+      </section>
+      <button id="nextBtn" class="hidden">Dalej</button>
       <p id="quizError" class="error" role="alert"></p>
     </section>
     <section class="panel hidden" id="donePanel">
-      <div class="done-icon">✓</div><h2>Quiz zakończony!</h2>
+      <div class="done-icon">✓</div>
+      <h2>Quiz zakończony!</h2>
       <p id="doneText">Twoje odpowiedzi zostały zapisane.</p>
-      <p class="hint">Wyniki i zwycięzcę ogłosi prowadzący.</p>
+      <div class="final-score" id="finalScore"></div>
+      <h3>Twoje odznaki</h3>
+      <div id="awardList" class="award-list"></div>
+      <p class="hint">Wyniki klasy i podsumowanie najtrudniejszych pytań znajdzie prowadzący.</p>
     </section>
-    <footer>Projekt edukacyjny • sarna europejska</footer>
+    <footer>Projekt edukacyjny • sarna europejska • zdjęcia: Wikimedia Commons</footer>
   </main>
   <script type="module" src="app.js"></script>
 </body>
