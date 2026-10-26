@@ -1,7 +1,7 @@
 {
   "rules": {
     "submissions": {
-      ".read": "auth != null && auth.token.email != null && auth.token.email.toLowerCase() === 'twoj-adres-admina@example.com'",
+      ".read": "auth != null && auth.token.email === 'twoj-adres-admina@example.com'",
       "$uid": {
         ".read": "auth != null && auth.uid === $uid",
         ".write": "auth != null && auth.uid === $uid && !data.exists()",
@@ -10,7 +10,7 @@
         "score": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 5" },
         "durationSeconds": { ".validate": "newData.isNumber() && newData.val() >= 0" },
         "questionCount": { ".validate": "newData.val() === 5" },
-        "submittedAt": { ".validate": "newData.isNumber() || newData.hasChildren()" },
+        "submittedAt": { ".validate": "newData.isNumber()" },
         "answers": {
           ".validate": "newData.hasChildren(['0','1','2','3','4'])",
           "$i": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 3" }
