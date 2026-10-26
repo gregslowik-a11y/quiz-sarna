@@ -167,8 +167,8 @@ $("nextBtn").addEventListener("click", async () => {
 function calculateAwards(answers, score) {
   const awards = [];
   if (score === questions.length) awards.push("🏆 Mistrz leśnej wiedzy");
-  else if (score >= 4) awards.push("🌟 Leśny ekspert");
-  else if (score >= 3) awards.push("🌿 Leśny odkrywca");
+  else if (score >= 10) awards.push("🌟 Leśny ekspert");
+  else if (score >= 7) awards.push("🌿 Leśny odkrywca");
   else awards.push("🍃 Uczestnik leśnej wyprawy");
   if (Number(answers[2]) === questions[2].correct) awards.push("🔎 Tropiciel śladów");
   if (Number(answers[3]) === questions[3].correct) awards.push("🦌 Przyjaciel sarny");
