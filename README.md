@@ -1,41 +1,32 @@
 # Quiz o sarnie — GitHub Pages + Firebase
 
-Quiz demonstracyjny dla 17 uczestników: 5 pytań, osobny start dla każdego ucznia, panel administratora z wynikami na żywo, rankingiem i eksportem CSV.
+Quiz dla 17 uczestników; adres strony pozostaje bez zmian, więc wcześniej wydrukowane kody QR nadal prowadzą do quizu. Quiz ma 5 pytań, zdjęcia, rundę tropów, sytuację dotyczącą młodej sarny, prawda/fałsz, objaśnienia po odpowiedziach, odznaki oraz panel statystyk klasy.
+
+## Funkcje
+- Strona uczestnika: pseudonim, pięć pytań, zdjęcia, informacja zwrotna po sprawdzeniu każdej odpowiedzi.
+- Odznaki: Mistrz leśnej wiedzy, Leśny ekspert, Leśny odkrywca, Tropiciel śladów i Przyjaciel sarny.
+- Panel prowadzącego: ranking, czas, średni wynik, najtrudniejsze pytanie, odsetek poprawnych odpowiedzi i eksport CSV.
+- Filtr popularnych niecenzuralnych loginów pozostaje aktywny.
 
 ## Pliki
-- `index.html` — strona uczestnika.
-- `admin.html` — panel prowadzącego (logowanie, wyniki, ranking, eksport CSV).
-- `questions.js` — pięć przykładowych pytań i indeksy poprawnych odpowiedzi.
-- `firebase-config.js` — konfiguracja aplikacji Firebase.
-- `database.rules.json` — początkowe reguły Realtime Database.
+- `index.html` — strona ucznia.
+- `admin.html` — panel prowadzącego.
+- `questions.js` — pytania i wyjaśnienia.
+- `app.js` / `admin.js` — logika quizu i statystyki.
+- `firebase-config.js` — konfiguracja projektu.
+- `database.rules.json` — reguły Realtime Database.
 
-## 1. Konfiguracja Firebase
-1. Utwórz projekt w [Firebase Console](https://console.firebase.google.com/).
-2. Dodaj aplikację internetową i skopiuj konfigurację do `firebase-config.js`.
-3. Włącz **Authentication → Sign-in method → Anonymous** oraz **Email/Password**.
-4. W Authentication utwórz konto administratora. W pliku `firebase-config.js` wpisz jego e-mail jako `ADMIN_EMAIL`.
-5. Utwórz **Realtime Database**. W `database.rules.json` zamień `twoj-adres-admina@example.com` na dokładny adres administratora, a następnie wklej te reguły w zakładce Rules i opublikuj.
-6. Uzupełnij `databaseURL` w `firebase-config.js` dokładnym adresem bazy widocznym w Firebase Console.
+## Ważne przed lekcją
+Ponieważ treść pytań została zmieniona, usuń stare próbne wyniki z węzła `submissions` w Firebase przed właściwym quizem. Dzięki temu statystyki pytań będą liczone wyłącznie dla nowej wersji. Nie usuwaj całej bazy ani konta administratora.
 
-Nie włączaj publicznego odczytu i zapisu bazy. Reguły pozwalają anonimowemu uczestnikowi wysłać tylko jeden rekord pod jego UID; wyniki są czytelne tylko dla konta administratora. Po zmianie reguł sprawdź je w Firebase Rules Playground.
+## Zdjęcia i licencje
+- „Roe Deer - Doe.jpg” — Caroline Legg, Wikimedia Commons, CC BY 2.0: https://commons.wikimedia.org/wiki/File:Roe_Deer_-_Doe.jpg
+- „Deer Hoofprint.jpg” — MaryC2000, Wikimedia Commons, CC BY 4.0: https://commons.wikimedia.org/wiki/File:Deer_Hoofprint.jpg
+- „Roe deer fawn (3722435972).jpg” — Gilles San Martin, Wikimedia Commons, CC BY-SA: https://commons.wikimedia.org/wiki/File:Roe_deer_fawn_(3722435972).jpg
 
-## 2. Publikacja przez GitHub Pages
-1. W repozytorium `gregslowik-a11y/quiz-sarna` otwórz **Settings → Pages**.
-2. Jako źródło wybierz gałąź `main` i folder `/(root)`, a następnie zapisz.
-3. Po opublikowaniu strona uczestnika będzie dostępna pod adresem `https://gregslowik-a11y.github.io/quiz-sarna/`.
-4. Panel administratora: `https://gregslowik-a11y.github.io/quiz-sarna/admin.html`.
+## Adresy
+- Quiz dla uczniów: https://gregslowik-a11y.github.io/quiz-sarna/
+- Panel prowadzącego: https://gregslowik-a11y.github.io/quiz-sarna/admin.html
 
-## 3. Kod QR
-Po opublikowaniu strony skopiuj dokładny adres uczestnika, wygeneruj z niego QR i sprawdź go telefonem przed lekcją. QR powinien prowadzić do strony głównej, nie do `admin.html`.
-
-## 4. Test przed lekcją
-- Otwórz stronę uczestnika na dwóch telefonach lub w dwóch przeglądarkach.
-- Sprawdź, czy wynik pojawia się w panelu administratora.
-- Sprawdź wylogowanie i eksport CSV.
-- Ta wersja ogranicza ponowne wysłanie w obrębie anonimowego UID, ale nie potwierdza tożsamości ucznia; inna przeglądarka lub wyczyszczenie danych może utworzyć nowy UID.
-
-## Uwaga: wersja demonstracyjna
-Klucz odpowiedzi jest w kodzie JavaScript, a wynik oblicza przeglądarka. Osoba techniczna może zobaczyć poprawne odpowiedzi lub zmodyfikować wynik. To wersja do nieformalnego quizu, nie do egzaminów ani oceniania o wysokiej stawce. Wersja bardziej odporna na manipulacje wymaga sprawdzania odpowiedzi po stronie serwera (np. Cloud Functions).
-
-## Edycja pytań
-W pliku `questions.js` zmień treść pytań, cztery warianty odpowiedzi i indeks `correct` (liczony od 0). Po każdej zmianie przetestuj quiz przed użyciem.
+## Ograniczenie
+To edukacyjna zabawa, nie egzamin. Odpowiedzi i klucz są odczytywane po stronie przeglądarki, więc użytkownik techniczny może próbować obejść wynik. Filtr loginów także nie wykryje wszystkich możliwych wariantów słów.
