@@ -1,152 +1,163 @@
-// 12 pytań: przyroda, tropy i anatomia czaszki sarny.
+// 15 pytań edukacyjnych: 10 o sarnie i jej życiu oraz 5 łatwych pytań o czaszce.
 export const questions = [
   {
     id: "samica",
-    q: "Na zdjęciu widzisz dorosłą samicę sarny. Jak się nazywa?",
-    a: ["Łania", "Koza", "Kozioł", "Koźlę"],
+    q: "Jak nazywa się dorosła samica sarny?",
+    a: ["Kozioł", "Koza", "Łania", "Koźlę"],
     correct: 1,
     image: "https://upload.wikimedia.org/wikipedia/commons/e/ec/Roe_Deer_-_Doe.jpg",
     imageAlt: "Dorosła samica sarny na łące",
-    imageCaption: "Przyjrzyj się budowie i wyglądowi dorosłej sarny.",
+    imageCaption: "Rozpoznaj dorosłą samicę sarny.",
     explanation: "Samicę sarny nazywamy kozą. Łania to samica jelenia szlachetnego, a kozioł to samiec sarny."
   },
   {
     id: "samiec",
     q: "Jak nazywa się dorosły samiec sarny?",
-    a: ["Kozioł", "Byk", "Tryk", "Ogier"],
-    correct: 0,
-    explanation: "Dorosły samiec sarny to kozioł. Sarna i jeleń szlachetny są różnymi gatunkami z rodziny jeleniowatych."
-  },
-  {
-    id: "tropy",
-    q: "Leśny detektyw: co najlepiej przedstawia ślad na zdjęciu?",
-    a: ["Trop zwierzęcia kopytnego", "Odcisk łapy lisa", "Ślad ptasiej stopy", "Odcisk ludzkiego buta"],
-    correct: 0,
-    image: "https://upload.wikimedia.org/wikipedia/commons/c/c4/Deer_Hoofprint.jpg",
-    imageAlt: "Odcisk kopyta zwierzęcia na ziemi",
-    imageCaption: "Ślady na miękkim podłożu mogą pomóc rozpoznać, jakie zwierzę tędy przechodziło.",
-    explanation: "To trop zwierzęcia kopytnego. Odciski racic mają charakterystyczny kształt, ale jeden trop nie zawsze wystarcza do pewnego określenia gatunku."
+    a: ["Byk", "Kozioł", "Tryk", "Ogier"],
+    correct: 1,
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Roe_deer_buck_in_a_clearing_in_Tuntorp%2C_Brastad_1.jpg?width=1200",
+    imageAlt: "Kozioł sarny na skraju leśnej polany",
+    imageCaption: "Samiec sarny ma zwykle niewielkie poroże.",
+    explanation: "Dorosły samiec sarny to kozioł. Sarna i jeleń to różne gatunki, choć oba należą do jeleniowatych."
   },
   {
     id: "kozle",
-    q: "Widzisz samotnie leżące w trawie młode koźlę. Co najlepiej zrobić?",
-    a: [
-      "Zostawić je w spokoju i spokojnie odejść",
-      "Zabrać je do domu",
-      "Pogłaskać i nakarmić",
-      "Podejść bardzo blisko, by zrobić zdjęcie"
-    ],
-    correct: 0,
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Roe_deer_fawn_%283722435972%29.jpg",
-    imageAlt: "Młoda sarna ukryta w trawie",
-    imageCaption: "Młode może leżeć nieruchomo i czekać, aż wróci matka.",
-    explanation: "Nie dotykaj ani nie zabieraj koźlęcia — matka może żerować w oddaleniu i wrócić później. Jeśli zwierzę jest ranne lub w bezpośrednim niebezpieczeństwie, powiedz dorosłemu."
+    q: "Jak nazywa się młode sarny?",
+    a: ["Cielę", "Jagnię", "Koźlę", "Źrebię"],
+    correct: 2,
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Roe_deer_fawn_%283722435972%29.jpg?width=1000",
+    imageAlt: "Młode koźlę sarny ukryte w trawie",
+    imageCaption: "Jasne plamki pomagają młodemu ukryć się wśród roślin.",
+    explanation: "Młodą sarnę nazywamy koźlęciem. Jego cętkowana sierść pomaga mu kamuflować się w trawie."
   },
   {
     id: "pokarm",
-    q: "Prawda czy fałsz: sarna jest roślinożercą i zjada między innymi liście, pędy oraz zioła.",
-    a: ["Prawda", "Fałsz"],
+    q: "Czym najczęściej żywi się sarna?",
+    a: ["Głównie owadami", "Liśćmi, pąkami, pędami i ziołami", "Wyłącznie rybami", "Mięsem innych zwierząt"],
+    correct: 1,
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Roe_deer_eating_leaves_in_Tuntorp_2.jpg?width=1200",
+    imageAlt: "Sarna zjadająca liście",
+    imageCaption: "Sarna wybiera różne części roślin rosnących w jej środowisku.",
+    explanation: "Sarna jest roślinożerna. Zjada między innymi liście, pąki, młode pędy, zioła i inne miękkie części roślin."
+  },
+  {
+    id: "siedlisko",
+    q: "Gdzie można spotkać sarnę?",
+    a: ["Tylko na pustyni", "Wyłącznie w wysokich górach", "W lasach, na skrajach pól i łąkach", "Tylko w centrum dużych miast"],
+    correct: 2,
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Roe_deer_buck_in_a_clearing_in_Tuntorp%2C_Brastad_1.jpg?width=1200",
+    imageAlt: "Sarna na skraju lasu",
+    imageCaption: "Skraj lasu zapewnia osłonę oraz dostęp do roślin.",
+    explanation: "Sarny spotyka się w lasach, zaroślach, na łąkach i w pobliżu pól. Lubią miejsca, w których mają i pokarm, i schronienie."
+  },
+  {
+    id: "siersc",
+    q: "Jaki kolor ma zwykle sierść sarny latem?",
+    a: ["Niebieski", "Rudobrązowy", "Całkowicie czarny", "Biały jak śnieg"],
+    correct: 1,
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/ec/Roe_Deer_-_Doe.jpg",
+    imageAlt: "Sarna z rudobrązową letnią sierścią",
+    imageCaption: "Przyjrzyj się kolorowi sierści na zdjęciu.",
+    explanation: "Latem sierść sarny jest zwykle rudobrązowa. W chłodniejszej części roku staje się bardziej szarobrązowa."
+  },
+  {
+    id: "tropy",
+    q: "Co przedstawia ślad na zdjęciu?",
+    a: ["Odcisk ludzkiego buta", "Ślad ptasiej stopy", "Trop zwierzęcia kopytnego", "Odcisk łapy lisa"],
+    correct: 2,
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Deer_Hoofprint.jpg?width=1200",
+    imageAlt: "Trop racicy na miękkim podłożu",
+    imageCaption: "Racice pozostawiają charakterystyczny ślad na ziemi lub śniegu.",
+    explanation: "To trop zwierzęcia kopytnego. Ślad pomaga rozpoznać grupę zwierząt, ale czasem do ustalenia gatunku potrzebne są dodatkowe wskazówki."
+  },
+  {
+    id: "bezpieczne-kozle",
+    q: "Widzisz samotnie leżące w trawie koźlę. Co najlepiej zrobić?",
+    a: ["Zostawić je w spokoju i odejść", "Zabrać je do domu", "Pogłaskać i nakarmić", "Podejść bardzo blisko, by zrobić zdjęcie"],
     correct: 0,
-    type: "truefalse",
-    explanation: "To prawda. Sarna jest roślinożerna; jej pokarm obejmuje m.in. liście, pąki, młode pędy i rośliny zielne."
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Roe_deer_fawn_%283722435972%29.jpg?width=1000",
+    imageAlt: "Koźlę ukryte w wysokiej trawie",
+    imageCaption: "Młode może czekać w ukryciu, gdy matka żeruje w pobliżu.",
+    explanation: "Nie dotykaj ani nie zabieraj koźlęcia — matka może być w pobliżu i wrócić później. Jeśli zwierzę wygląda na ranne albo jest w bezpośrednim niebezpieczeństwie, powiedz dorosłemu."
+  },
+  {
+    id: "pora-aktywnosci",
+    q: "O jakiej porze najłatwiej często zaobserwować sarnę?",
+    a: ["Tylko w środku dnia", "O świcie i o zmierzchu", "Wyłącznie o północy", "Tylko podczas burzy"],
+    correct: 1,
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Roe_deer_in_morning_mist_Lower_Havel_Valley.jpg?width=1200",
+    imageAlt: "Sarna na łące o poranku",
+    imageCaption: "Poranek to dobra pora, by wypatrywać zwierząt z daleka i w ciszy.",
+    explanation: "Sarny często są aktywne o świcie i o zmierzchu, ale mogą być widywane także o innych porach."
+  },
+  {
+    id: "rodzina",
+    q: "Do jakiej rodziny zoologicznej należy sarna?",
+    a: ["Psowate", "Jeleniowate", "Kotowate", "Zającowate"],
+    correct: 1,
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Roe_deer_buck_in_a_clearing_in_Tuntorp%2C_Brastad_1.jpg?width=1200",
+    imageAlt: "Sarna na leśnej polanie",
+    imageCaption: "Sarna należy do tej samej rodziny co między innymi jeleń i łoś.",
+    explanation: "Sarna należy do rodziny jeleniowatych. Do tej rodziny zaliczają się także między innymi jeleń szlachetny i łoś."
   },
   {
     id: "parostki",
     q: "Jak nazywa się poroże dorosłego samca sarny?",
-    a: ["Parostki", "Wieniec", "Rogi stałe", "Rogi keratynowe"],
-    correct: 0,
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Full_deer_skull.jpg",
-    imageAlt: "Czaszka zwierzęcia z rodziny jeleniowatych",
-    imageCaption: "Przyjrzyj się części czaszki, z której wyrasta poroże.",
-    imageZoom: 1.25,
-    imagePosition: "center 30%",
-    explanation: "Poroże kozła sarny nazywa się parostkami. Termin „wieniec” stosuje się zwykle do poroża dorosłego jelenia szlachetnego."
+    a: ["Wieniec", "Rogi stałe", "Parostki", "Rogi keratynowe"],
+    correct: 2,
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Roe_deer_antler.jpg?width=1200",
+    imageAlt: "Poroże sarny",
+    imageCaption: "Przyjrzyj się kształtowi niewielkiego poroża sarny.",
+    imageZoom: 1.15,
+    imagePosition: "center center",
+    explanation: "Poroże kozła sarny nazywa się parostkami. Poroże jest zrzucane i odrasta; nie jest tym samym co stałe rogi."
   },
   {
     id: "mozdzen",
-    q: "Jak nazywa się kostny wyrostek na czaszce, z którego wyrasta poroże?",
-    a: ["Możdżeń", "Oczodół", "Żuchwa", "Kość nosowa"],
-    correct: 0,
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Full_deer_skull.jpg",
-    imageAlt: "Zbliżenie na czaszkę i nasadę poroża jeleniowatego",
-    imageCaption: "Możdżeń to kostny wyrostek kości czołowej przy nasadzie poroża.",
-    imageZoom: 1.8,
-    imagePosition: "center 22%",
+    q: "Jak nazywa się kostny wyrostek, z którego wyrasta poroże?",
+    a: ["Oczodół", "Możdżeń", "Żuchwa", "Kość nosowa"],
+    correct: 1,
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Cr%C3%A2nio_de_cor%C3%A7a.jpg?width=1200",
+    imageAlt: "Czaszka sarny z widoczną częścią czołową",
+    imageCaption: "Możdżeń znajduje się na kości czołowej przy nasadzie poroża.",
+    imageZoom: 1.35,
+    imagePosition: "center 20%",
     explanation: "Możdżeń to kostny wyrostek kości czołowej, na którym rozwija się poroże."
   },
   {
-    id: "koscinosowe",
-    q: "Które kości tworzą górną część okolicy nosa w przedniej, wydłużonej części czaszki?",
-    a: ["Kości nosowe", "Kości potyliczne", "Żuchwa", "Zęby policzkowe"],
-    correct: 0,
-    image: "https://upload.wikimedia.org/wikipedia/commons/7/76/Cr%C3%A2nio_de_cor%C3%A7a.jpg",
-    imageAlt: "Czaszka kozy sarniej widziana z góry",
-    imageCaption: "Szukaj wydłużonego, przedniego odcinka twarzoczaszki.",
-    imageZoom: 1.55,
-    imagePosition: "center 34%",
-    explanation: "Kości nosowe leżą z przodu czaszki i tworzą górną część okolicy nosa, osłaniając część jamy nosowej."
-  },
-  {
     id: "oczodoly",
-    q: "Do czego służą oczodoły widoczne po bokach czaszki?",
-    image: "https://upload.wikimedia.org/wikipedia/commons/7/76/Cr%C3%A2nio_de_cor%C3%A7a.jpg",
-    imageAlt: "Boczny obszar czaszki sarny z dużym oczodołem",
-    imageCaption: "Oczodoły to duże otwory po bokach czaszki.",
-    imageZoom: 1.6,
-    imagePosition: "center 47%",
-    a: [
-      "Mieszczą i chronią narządy wzroku",
-      "Służą do rozcierania pokarmu",
-      "Są miejscem wyrastania poroża",
-      "Łączą zęby z żuchwą"
-    ],
-    correct: 0,
-    explanation: "Oczodoły to zagłębienia czaszki mieszczące gałki oczne i związane z nimi struktury."
+    q: "Do czego służą oczodoły po bokach czaszki?",
+    a: ["Do rozcierania pokarmu", "Do wyrastania poroża", "Mieszczą i chronią narządy wzroku", "Łączą zęby z żuchwą"],
+    correct: 2,
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Cr%C3%A2nio_de_cor%C3%A7a.jpg?width=1200",
+    imageAlt: "Czaszka sarny z dużymi otworami oczodołów",
+    imageCaption: "Oczodoły są dużymi otworami po bokach czaszki.",
+    imageZoom: 1.55,
+    imagePosition: "center 48%",
+    explanation: "Oczodoły to miejsca w czaszce, w których znajdują się gałki oczne i związane z nimi struktury."
   },
   {
     id: "zuchwa",
     q: "Jak nazywa się ruchoma kość dolnej części pyska?",
-    a: ["Żuchwa", "Możdżeń", "Kość nosowa", "Mózgoczaszka"],
-    correct: 0,
-    image: "https://upload.wikimedia.org/wikipedia/commons/7/76/Cr%C3%A2nio_de_cor%C3%A7a.jpg",
-    imageAlt: "Dolna część czaszki sarny z okolicą żuchwy",
-    imageCaption: "Żuchwa jest ruchomą kością dolnej części pyska.",
-    imageZoom: 1.7,
-    imagePosition: "center 75%",
-    explanation: "Żuchwa jest ruchomą kością dolnej części pyska. Znajdują się w niej dolne siekacze i zęby policzkowe."
-  },
-  {
-    id: "szczeka-gorna",
-    q: "Które zdanie o górnej szczęce sarny jest prawdziwe?",
-    image: "https://upload.wikimedia.org/wikipedia/commons/7/76/Cr%C3%A2nio_de_cor%C3%A7a.jpg",
-    imageAlt: "Przednia część górnej szczęki czaszki sarny",
-    imageCaption: "Zwróć uwagę na przednią część górnej szczęki.",
-    imageZoom: 1.7,
-    imagePosition: "center 66%",
-    a: [
-      "Z przodu nie ma siekaczy; współpracuje z dolnymi siekaczami i poduszką dziąsłową",
-      "Ma taki sam zestaw siekaczy jak żuchwa",
-      "Jest ruchomą kością dolnej części pyska",
-      "To część czaszki, z której wyrasta poroże"
-    ],
-    correct: 0,
-    explanation: "U jeleniowatych z przodu górnej szczęki nie ma siekaczy. Rośliny odgryzają dolnymi siekaczami opartymi o twardą poduszkę dziąsłową."
+    a: ["Mózgoczaszka", "Kość nosowa", "Możdżeń", "Żuchwa"],
+    correct: 3,
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Cr%C3%A2nio_de_cor%C3%A7a.jpg?width=1200",
+    imageAlt: "Czaszka sarny z widoczną żuchwą",
+    imageCaption: "Dolna część pyska jest związana z ruchomą żuchwą.",
+    imageZoom: 1.55,
+    imagePosition: "center 77%",
+    explanation: "Żuchwa jest ruchomą kością dolnej części pyska. Znajdują się w niej dolne siekacze oraz zęby policzkowe."
   },
   {
     id: "zeby",
     q: "Które zęby pomagają sarnie rozcierać pokarm roślinny?",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Deer_Skull_176.jpg",
-    imageAlt: "Czaszka jeleniowatego z widocznymi zębami",
-    imageCaption: "Przyjrzyj się zębom policzkowym i ich powierzchniom żującym.",
-    imageZoom: 1.8,
-    imagePosition: "center 75%",
-    a: [
-      "Zęby policzkowe, w tym przedtrzonowe i trzonowe",
-      "Wyłącznie kły",
-      "Siekacze górne",
-      "Zęby służące do wyrastania poroża"
-    ],
-    correct: 0,
-    explanation: "Zęby policzkowe mają powierzchnie przystosowane do rozcierania roślin. U jeleniowatych z przodu górnej szczęki nie ma siekaczy — pokarm odgryzają dolnymi siekaczami opartymi o twardą poduszkę dziąsłową."
+    a: ["Wyłącznie kły", "Siekacze górne", "Zęby policzkowe — przedtrzonowce i trzonowce", "Kości nosowe"],
+    correct: 2,
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Cr%C3%A2nio_de_cor%C3%A7a.jpg?width=1200",
+    imageAlt: "Czaszka sarny z widocznymi zębami policzkowymi",
+    imageCaption: "Zęby policzkowe mają szerokie powierzchnie do rozcierania roślin.",
+    imageZoom: 1.75,
+    imagePosition: "center 77%",
+    explanation: "Przedtrzonowce i trzonowce pomagają rozcierać pokarm. U jeleniowatych z przodu górnej szczęki nie ma siekaczy; rośliny odgryzają dolnymi siekaczami opartymi o twardą poduszkę dziąsłową."
   }
 ];
