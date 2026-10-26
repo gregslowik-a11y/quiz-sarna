@@ -55,6 +55,11 @@ export const questions = [
     q: "Jak nazywa się poroże dorosłego samca sarny?",
     a: ["Parostki", "Wieniec", "Rogi stałe", "Rogi keratynowe"],
     correct: 0,
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Full_deer_skull.jpg",
+    imageAlt: "Czaszka zwierzęcia z rodziny jeleniowatych",
+    imageCaption: "Przyjrzyj się części czaszki, z której wyrasta poroże.",
+    imageZoom: 1.25,
+    imagePosition: "center 30%",
     explanation: "Poroże kozła sarny nazywa się parostkami. Termin „wieniec” stosuje się zwykle do poroża dorosłego jelenia szlachetnego."
   },
   {
@@ -62,6 +67,11 @@ export const questions = [
     q: "Jak nazywa się kostny wyrostek na czaszce, z którego wyrasta poroże?",
     a: ["Możdżeń", "Oczodół", "Żuchwa", "Kość nosowa"],
     correct: 0,
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Full_deer_skull.jpg",
+    imageAlt: "Zbliżenie na czaszkę i nasadę poroża jeleniowatego",
+    imageCaption: "Możdżeń to kostny wyrostek kości czołowej przy nasadzie poroża.",
+    imageZoom: 1.8,
+    imagePosition: "center 22%",
     explanation: "Możdżeń to kostny wyrostek kości czołowej, na którym rozwija się poroże."
   },
   {
@@ -69,11 +79,21 @@ export const questions = [
     q: "Które kości tworzą górną część okolicy nosa w przedniej, wydłużonej części czaszki?",
     a: ["Kości nosowe", "Kości potyliczne", "Żuchwa", "Zęby policzkowe"],
     correct: 0,
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/76/Cr%C3%A2nio_de_cor%C3%A7a.jpg",
+    imageAlt: "Czaszka kozy sarniej widziana z góry",
+    imageCaption: "Szukaj wydłużonego, przedniego odcinka twarzoczaszki.",
+    imageZoom: 1.55,
+    imagePosition: "center 34%",
     explanation: "Kości nosowe leżą z przodu czaszki i tworzą górną część okolicy nosa, osłaniając część jamy nosowej."
   },
   {
     id: "oczodoly",
     q: "Do czego służą oczodoły widoczne po bokach czaszki?",
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/76/Cr%C3%A2nio_de_cor%C3%A7a.jpg",
+    imageAlt: "Boczny obszar czaszki sarny z dużym oczodołem",
+    imageCaption: "Oczodoły to duże otwory po bokach czaszki.",
+    imageZoom: 1.6,
+    imagePosition: "center 47%",
     a: [
       "Mieszczą i chronią narządy wzroku",
       "Służą do rozcierania pokarmu",
@@ -88,11 +108,21 @@ export const questions = [
     q: "Jak nazywa się ruchoma kość dolnej części pyska?",
     a: ["Żuchwa", "Możdżeń", "Kość nosowa", "Mózgoczaszka"],
     correct: 0,
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/76/Cr%C3%A2nio_de_cor%C3%A7a.jpg",
+    imageAlt: "Dolna część czaszki sarny z okolicą żuchwy",
+    imageCaption: "Żuchwa jest ruchomą kością dolnej części pyska.",
+    imageZoom: 1.7,
+    imagePosition: "center 75%",
     explanation: "Żuchwa jest ruchomą kością dolnej części pyska. Znajdują się w niej dolne siekacze i zęby policzkowe."
   },
   {
     id: "szczeka-gorna",
     q: "Które zdanie o górnej szczęce sarny jest prawdziwe?",
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/76/Cr%C3%A2nio_de_cor%C3%A7a.jpg",
+    imageAlt: "Przednia część górnej szczęki czaszki sarny",
+    imageCaption: "Zwróć uwagę na przednią część górnej szczęki.",
+    imageZoom: 1.7,
+    imagePosition: "center 66%",
     a: [
       "Z przodu nie ma siekaczy; współpracuje z dolnymi siekaczami i poduszką dziąsłową",
       "Ma taki sam zestaw siekaczy jak żuchwa",
@@ -105,6 +135,11 @@ export const questions = [
   {
     id: "zeby",
     q: "Które zęby pomagają sarnie rozcierać pokarm roślinny?",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Deer_Skull_176.jpg",
+    imageAlt: "Czaszka jeleniowatego z widocznymi zębami",
+    imageCaption: "Przyjrzyj się zębom policzkowym i ich powierzchniom żującym.",
+    imageZoom: 1.8,
+    imagePosition: "center 75%",
     a: [
       "Zęby policzkowe, w tym przedtrzonowe i trzonowe",
       "Wyłącznie kły",
