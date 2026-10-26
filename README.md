@@ -1,11 +1,12 @@
 # Quiz o sarnie — GitHub Pages + Firebase
 
-Quiz dla 17 uczestników; adres strony pozostaje bez zmian, więc wydrukowane wcześniej kody QR nadal prowadzą do quizu. Quiz ma teraz 12 pytań: przyroda, zachowanie w lesie i anatomia czaszki sarny z projektu/prezentacji.
+Quiz dla 17 uczestników; adres strony pozostaje bez zmian, więc wydrukowane wcześniej kody QR nadal prowadzą do quizu. Quiz ma 12 pytań, a kolejność pytań i odpowiedzi jest losowana oddzielnie dla każdego uczestnika. W pytaniach o czaszkę pokazują się zdjęcia, zbliżenia i podpisy.
 
 ## Funkcje
 - 12 pytań z odpowiedziami wielokrotnego wyboru i prawda/fałsz.
 - Zdjęcia sarny, tropu i młodego koźlęcia.
-- 7 pytań o czaszce: parostki, możdżeń, kości nosowe, oczodoły, szczęka górna, żuchwa i zęby policzkowe.
+- 7 pytań o czaszce ze zdjęciami: parostki, możdżeń, kości nosowe, oczodoły, szczęka górna, żuchwa i zęby policzkowe.
+- Kolejność pytań i wariantów odpowiedzi miesza się dla każdej próby; zapisana kolejność pozwala panelowi poprawnie liczyć wyniki i statystyki.
 - Wyjaśnienie edukacyjne po każdej odpowiedzi.
 - Odznaki: Mistrz leśnej wiedzy, Leśny ekspert, Leśny odkrywca, Tropiciel śladów i Przyjaciel sarny.
 - Panel prowadzącego: ranking, czas, średni wynik, najtrudniejsze pytanie, eksport CSV i przycisk do wyczyszczenia wyników.
@@ -26,6 +27,11 @@ Quiz dla 17 uczestników; adres strony pozostaje bez zmian, więc wydrukowane wc
 Wyczyść stare wyniki z wersji 5-pytaniowej w panelu prowadzącego, używając przycisku **Wyczyść wszystkie wyniki**. Potwierdź ostrzeżenie i wpisz `USUŃ WYNIKI`. Dzięki temu ranking i statystyki dotyczą wyłącznie nowej wersji. Operacja jest nieodwracalna; nie usuwa całej bazy ani konta administratora.
 
 ## Zdjęcia i licencje
+Zdjęcia czaszek i zębów pochodzą z Wikimedia Commons; niektóre przedstawiają czaszki innych jeleniowatych, więc służą jako ilustracja porównawcza, a nie dokładny model każdej kości sarny.
+- „Full deer skull.jpg” — Jbjensen1, CC BY 4.0: https://commons.wikimedia.org/wiki/File:Full_deer_skull.jpg
+- „Crânio de corça.jpg” — Cpls, CC BY-SA 4.0, czaszka sarny europejskiej: https://commons.wikimedia.org/wiki/File:Cr%C3%A2nio_de_cor%C3%A7a.jpg
+- „Deer Skull 176.jpg” — Chris Light, CC BY-SA 4.0, czaszka mulaka: https://commons.wikimedia.org/wiki/File:Deer_Skull_176.jpg
+
 - „Roe Deer - Doe.jpg” — Caroline Legg, Wikimedia Commons, CC BY 2.0: https://commons.wikimedia.org/wiki/File:Roe_Deer_-_Doe.jpg
 - „Deer Hoofprint.jpg” — MaryC2000, Wikimedia Commons, CC BY 4.0: https://commons.wikimedia.org/wiki/File:Deer_Hoofprint.jpg
 - „Roe deer fawn (3722435972).jpg” — Gilles San Martin, Wikimedia Commons, CC BY-SA: https://commons.wikimedia.org/wiki/File:Roe_deer_fawn_(3722435972).jpg
