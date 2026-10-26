@@ -1,12 +1,12 @@
-// Uzupełnij danymi z Firebase Console → Project settings → Your apps → Web app.
-// To nie są hasła. Nie umieszczaj tu kluczy prywatnych ani haseł administratora.
+// Konfiguracja aplikacji internetowej Firebase.
+// Uzupełniono wartości projektu. Zastąp UZUPELNIJ_API_KEY wartością apiKey z Firebase Console.
 export const firebaseConfig = {
   apiKey: "UZUPELNIJ_API_KEY",
-  authDomain: "UZUPELNIJ_PROJECT_ID.firebaseapp.com",
-  databaseURL: "https://UZUPELNIJ_DATABASE_URL",
-  projectId: "UZUPELNIJ_PROJECT_ID",
-  appId: "UZUPELNIJ_APP_ID"
+  authDomain: "quiz-sarna.firebaseapp.com",
+  databaseURL: "https://quiz-sarna-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "quiz-sarna",
+  appId: "1:467102766307:web:2faf2b1605564285b121d6"
 };
 
-// Musi dokładnie odpowiadać adresowi e-mail konta administratora w Firebase Authentication.
-export const ADMIN_EMAIL = "twoj-adres-admina@example.com";
+// Adres konta administratora w Firebase Authentication.
+export const ADMIN_EMAIL = "alexanderslowik2013@gmail.com";
