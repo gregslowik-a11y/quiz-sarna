@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#173b2a">
+  <title>Quiz o sarnie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div class="eyebrow">LEŚNA WIEDZA • QUIZ KLASOWY</div>
+      <h1>Quiz o sarnie</h1>
+      <p>5 pytań • jedna próba • powodzenia!</p>
+    </header>
+    <section class="panel" id="entry">
+      <h2>Dołącz do quizu</h2>
+      <label for="nickname">Twój login lub pseudonim</label>
+      <input id="nickname" maxlength="24" autocomplete="nickname" placeholder="Np. LeśnyOdkrywca">
+      <button id="startBtn">Rozpocznij quiz</button>
+      <p class="hint">Każdy uczestnik rozwiązuje test na swoim telefonie. Nie wpisuj nazwiska ani innych prywatnych danych.</p>
+      <p id="entryError" class="error" role="alert"></p>
+    </section>
+    <section class="panel hidden" id="quizPanel">
+      <div class="quiz-top"><span id="progress">Pytanie 1 z 5</span><span id="timer">00:00</span></div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <h2 id="questionText"></h2>
+      <div id="answers" class="answers"></div>
+      <button id="nextBtn" disabled>Dalej</button>
+      <p id="quizError" class="error" role="alert"></p>
+    </section>
+    <section class="panel hidden" id="donePanel">
+      <div class="done-icon">✓</div><h2>Quiz zakończony!</h2>
+      <p id="doneText">Twoje odpowiedzi zostały zapisane.</p>
+      <p class="hint">Wyniki i zwycięzcę ogłosi prowadzący.</p>
+    </section>
+    <footer>Projekt edukacyjny • sarna europejska</footer>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
