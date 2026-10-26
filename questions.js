@@ -99,7 +99,7 @@ export const questions = [
   },
   {
     id: "zeby",
-    q: "Które zęby pomagają sar­nie rozcierać pokarm roślinny?",
+    q: "Które zęby pomagają sarnie rozcierać pokarm roślinny?",
     a: [
       "Zęby policzkowe, w tym przedtrzonowe i trzonowe",
       "Wyłącznie kły",
