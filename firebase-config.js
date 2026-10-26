@@ -1,7 +1,6 @@
 // Konfiguracja aplikacji internetowej Firebase.
-// Uzupełniono wartości projektu. Zastąp UZUPELNIJ_API_KEY wartością apiKey z Firebase Console.
 export const firebaseConfig = {
-  apiKey: "UZUPELNIJ_API_KEY",
+  apiKey: "AIzaSyAUIdYwFwV8dwRhgfroWg2gh7OPnguT974",
   authDomain: "quiz-sarna.firebaseapp.com",
   databaseURL: "https://quiz-sarna-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "quiz-sarna",
