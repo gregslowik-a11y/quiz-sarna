@@ -16,10 +16,10 @@ let user = null, nickname = "", index = 0, picked = {}, startedAt = 0, timerHand
 const profanityRoots = [
   "kurw", "chuj", "huj", "jeb", "pierd", "spierd", "pojeb", "zjeb",
   "zajeb", "wyjeb", "najeb", "dojeb", "pizd", "sukinsyn", "skurwysyn",
-  "dziwk", "szmat", "kutas", "cipa", "fiut", "cwel", "sraj", "gowno",
+  "dziwk", "szmat", "kutas", "cipa", "fiut", "cwel", "sraj", "gowno", "dupa",
   "ruchaj", "ruchac", "fuck", "shit", "bitch", "cunt", "pussy",
   "bastard", "motherfuck", "whore", "slut", "wank", "twat", "bollock",
-  "asshole", "arsehole", "faggot", "nigger", "nigga", "retard"
+  "asshole", "arsehole", "dickhead", "dickwad", "jackass", "asshat", "faggot", "nigger", "nigga", "retard"
 ];
 const exactProfanity = new Set(["ass", "dick", "cock", "damn"]);
 
@@ -44,6 +44,7 @@ function containsProfanity(value) {
 
   // Detect simple attempts to bypass the filter, e.g. letters separated by punctuation.
   const compact = normalized.replace(/[^a-z0-9]/g, "");
+  if (exactProfanity.has(compact)) return true;
   return profanityRoots.some(root => compact.includes(root));
 }
 
