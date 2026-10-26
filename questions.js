@@ -6,7 +6,7 @@ export const questions = [
     q: "Na zdjęciu widzisz dorosłą samicę sarny. Jak się nazywa?",
     a: ["Łania", "Koza", "Kozioł", "Koźlę"],
     correct: 1,
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Roe_Deer_-_Doe.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/ec/Roe_Deer_-_Doe.jpg",
     imageAlt: "Dorosła samica sarny na łące",
     imageCaption: "Przyjrzyj się budowie i wyglądowi dorosłej sarny.",
     explanation: "Samicę sarny nazywamy kozą. Łania to samica jelenia szlachetnego, a kozioł to samiec sarny."
@@ -23,9 +23,9 @@ export const questions = [
     q: "Leśny detektyw: co najlepiej przedstawia ślad na zdjęciu?",
     a: ["Trop zwierzęcia kopytnego", "Odcisk łapy lisa", "Ślad ptasiej stopy", "Odcisk ludzkiego buta"],
     correct: 0,
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Deer_Hoofprint.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/c4/Deer_Hoofprint.jpg",
     imageAlt: "Odcisk kopyta zwierzęcia na ziemi",
-    imageCaption: "Ślady na miękkim podłożu mogą pomóc rozpoznać, jakie zwierzętędy przechodziło.",
+    imageCaption: "Ślady na miękkim podłożu mogą pomóc rozpoznać, jakie zwierzę tędy przechodziło.",
     explanation: "To trop, czyli ślad pozostawiony przez zwierzę. Odciski racic mają charakterystyczny kształt; sam jeden trop nie zawsze pozwala pewnie ustalić gatunek."
   },
   {
@@ -38,7 +38,7 @@ export const questions = [
       "Podejść bardzo blisko, by zrobić zdjęcie"
     ],
     correct: 0,
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Roe_deer_fawn_%283722435972%29.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Roe_deer_fawn_%283722435972%29.jpg",
     imageAlt: "Młoda sarna ukryta w trawie",
     imageCaption: "Młode może leżeć nieruchomo i czekać, aż wróci matka.",
     explanation: "Nie dotykaj ani nie zabieraj koźlęcia — matka może żerować w oddaleniu i wrócić później. Jeśli zwierzę jest wyraźnie ranne lub znajduje się w bezpośrednim niebezpieczeństwie, powiedz dorosłemu, by skontaktował się z odpowiednimi służbami."
