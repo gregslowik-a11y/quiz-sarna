@@ -3,6 +3,7 @@
     "submissions": {
       ".read": "auth != null && auth.token.email != null && auth.token.email.toLowerCase() === 'twoj-adres-admina@example.com'",
       "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
         ".write": "auth != null && auth.uid === $uid && !data.exists()",
         ".validate": "newData.hasChildren(['nickname', 'answers', 'score', 'durationSeconds', 'submittedAt', 'questionCount'])",
         "nickname": { ".validate": "newData.isString() && newData.val().length >= 2 && newData.val().length <= 24" },
