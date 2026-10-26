@@ -5,7 +5,7 @@ Quiz dla 17 uczestników; adres strony pozostaje bez zmian, więc wydrukowane wc
 ## Funkcje
 - 12 pytań z odpowiedziami wielokrotnego wyboru i prawda/fałsz.
 - Zdjęcia sarny, tropu i młodego koźlęcia.
-- 7 pytań o czaszce: parostki, możdżeń, mózgoczaszka, oczodoły, żuchwa, budowa poroża i zęby policzkowe.
+- 7 pytań o czaszce: parostki, możdżeń, kości nosowe, oczodoły, szczęka górna, żuchwa i zęby policzkowe.
 - Wyjaśnienie edukacyjne po każdej odpowiedzi.
 - Odznaki: Mistrz leśnej wiedzy, Leśny ekspert, Leśny odkrywca, Tropiciel śladów i Przyjaciel sarny.
 - Panel prowadzącego: ranking, czas, średni wynik, najtrudniejsze pytanie, eksport CSV i przycisk do wyczyszczenia wyników.
