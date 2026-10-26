@@ -39,16 +39,27 @@ onAuthStateChanged(auth, user => {
   }
 });
 
+function getQuestionIds(r) {
+  return Array.isArray(r.questionIds) && r.questionIds.length === questions.length
+    ? r.questionIds
+    : questions.map(q => q.id); // zgodność z wcześniejszymi zapisami w kolejności kanonicznej
+}
+function getAnswerForQuestion(r, questionId) {
+  const q = questions.find(item => item.id === questionId);
+  const answerIndex = getQuestionIds(r).indexOf(questionId);
+  return q && answerIndex >= 0 && Array.isArray(r.answers) ? Number(r.answers[answerIndex]) : undefined;
+}
 function getAwards(r) {
-  const answers = r.answers || [];
   const score = Number(r.score) || 0;
   const awards = [];
   if (score === questions.length) awards.push("🏆 Mistrz leśnej wiedzy");
   else if (score >= 10) awards.push("🌟 Leśny ekspert");
   else if (score >= 7) awards.push("🌿 Leśny odkrywca");
   else awards.push("🍃 Uczestnik leśnej wyprawy");
-  if (Number(answers[2]) === questions[2].correct) awards.push("🔎 Tropiciel śladów");
-  if (Number(answers[3]) === questions[3].correct) awards.push("🦌 Przyjaciel sarny");
+  const trackQuestion = questions.find(q => q.id === "tropy");
+  const fawnQuestion = questions.find(q => q.id === "kozle");
+  if (trackQuestion && getAnswerForQuestion(r, "tropy") === trackQuestion.correct) awards.push("🔎 Tropiciel śladów");
+  if (fawnQuestion && getAnswerForQuestion(r, "kozle") === fawnQuestion.correct) awards.push("🦌 Przyjaciel sarny");
   return awards;
 }
 function render(data) {
@@ -68,7 +79,12 @@ function render(data) {
   } else {
     rows.forEach((r, i) => {
       const tr = document.createElement("tr");
-      const responseMarks = (r.answers || []).map((answer, qi) => `${qi+1}${Number(answer) === questions[qi]?.correct ? "✓" : "✗"}`).join(" ");
+      const answerOrder = getQuestionIds(r);
+      const responseMarks = questions.map((question, qi) => {
+        const answerIndex = answerOrder.indexOf(question.id);
+        if (answerIndex < 0 || !Array.isArray(r.answers) || r.answers[answerIndex] === undefined) return `${qi+1}—`;
+        return `${qi+1}${Number(r.answers[answerIndex]) === question.correct ? "✓" : "✗"}`;
+      }).join(" ");
       const vals = [i+1, r.nickname || "—", `${r.score ?? 0}/${questions.length}`, fmt(r.durationSeconds), responseMarks || "—", getAwards(r).join(" · "), safeTime(r.submittedAt)];
       vals.forEach((v, j) => { const td = document.createElement("td"); td.textContent = v; if (i===0) td.classList.add("leader"); tr.append(td); });
       body.append(tr);
@@ -76,8 +92,10 @@ function render(data) {
   }
 
   const stats = questions.map((q, qi) => {
-    const validRows = rows.filter(r => Array.isArray(r.answers) && r.answers.length === questions.length && Number.isInteger(Number(r.answers[qi])));
-    const correctCount = validRows.filter(r => Number(r.answers[qi]) === q.correct).length;
+    const validRows = rows.filter(r => Array.isArray(r.answers) && r.answers.length === questions.length &&
+      getQuestionIds(r).length === questions.length && getQuestionIds(r).includes(q.id) &&
+      Number.isInteger(Number(r.answers[getQuestionIds(r).indexOf(q.id)])));
+    const correctCount = validRows.filter(r => Number(r.answers[getQuestionIds(r).indexOf(q.id)]) === q.correct).length;
     return {q, qi, correctCount, total: validRows.length, rate: validRows.length ? correctCount / validRows.length : null};
   });
   const statsBody = $("questionStatsBody"); statsBody.replaceChildren();
@@ -100,7 +118,7 @@ function render(data) {
 }
 $("exportBtn").addEventListener("click", () => {
   const header = ["Pozycja","Login","Punkty","Czas_sekundy","Odpowiedzi_poprawne_numerami","Odznaki","Wysłano"];
-  const data = rows.map((r,i) => [i+1,r.nickname,r.score,r.durationSeconds,(r.answers||[]).map((a,j)=>Number(a)===questions[j]?.correct ? "P"+(j+1)+":tak" : "P"+(j+1)+":nie").join(" | "),getAwards(r).join(", "),r.submittedAt ? new Date(r.submittedAt).toISOString() : ""]);
+  const data = rows.map((r,i) => [i+1,r.nickname,r.score,r.durationSeconds,questions.map((q,j)=>{const answerIndex=getQuestionIds(r).indexOf(q.id);return answerIndex>=0 && Number((r.answers||[])[answerIndex])===q.correct ? "P"+(j+1)+":tak" : "P"+(j+1)+":nie";}).join(" | "),getAwards(r).join(", "),r.submittedAt ? new Date(r.submittedAt).toISOString() : ""]);
   const csv = [header,...data].map(row => row.map(v => `"${String(v ?? "").replaceAll('"','""')}"`).join(";")).join("\r\n");
   const blob = new Blob(["\ufeff"+csv], {type:"text/csv;charset=utf-8;"});
   const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "wyniki-quizu-sarna.csv"; a.click(); URL.revokeObjectURL(a.href);
