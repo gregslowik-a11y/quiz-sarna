@@ -10,15 +10,66 @@ const db = getDatabase(app);
 const $ = (id) => document.getElementById(id);
 let user = null, nickname = "", index = 0, picked = {}, startedAt = 0, timerHandle = null;
 
+// Blokowane są częste wulgaryzmy i ich odmiany w języku polskim i angielskim.
+// Normalizacja uwzględnia wielkość liter, polskie znaki, cyfry podobne do liter
+// oraz wulgaryzmy rozdzielone spacjami lub znakami interpunkcyjnymi.
+const profanityRoots = [
+  "kurw", "chuj", "huj", "jeb", "pierd", "spierd", "pojeb", "zjeb",
+  "zajeb", "wyjeb", "najeb", "dojeb", "pizd", "sukinsyn", "skurwysyn",
+  "dziwk", "szmat", "kutas", "cipa", "fiut", "cwel", "sraj", "gowno",
+  "ruchaj", "ruchac", "fuck", "shit", "bitch", "cunt", "pussy",
+  "bastard", "motherfuck", "whore", "slut", "wank", "twat", "bollock",
+  "asshole", "arsehole", "faggot", "nigger", "nigga", "retard"
+];
+const exactProfanity = new Set(["ass", "dick", "cock", "damn"]);
+
+function normalizeNickname(value) {
+  return value
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/ł/g, "l")
+    .replace(/[0134578@!$]/g, ch => ({
+      "0": "o", "1": "i", "3": "e", "4": "a",
+      "5": "s", "7": "t", "8": "b", "@": "a",
+      "!": "i", "$": "s"
+    }[ch] || ch));
+}
+
+function containsProfanity(value) {
+  const normalized = normalizeNickname(value);
+  const words = normalized.split(/[^a-z0-9]+/).filter(Boolean);
+  if (words.some(word => exactProfanity.has(word))) return true;
+  if (words.some(word => profanityRoots.some(root => word.startsWith(root)))) return true;
+
+  // Detect simple attempts to bypass the filter, e.g. letters separated by punctuation.
+  const compact = normalized.replace(/[^a-z0-9]/g, "");
+  return profanityRoots.some(root => compact.includes(root));
+}
+
 function show(id) { $(id).classList.remove("hidden"); }
 function hide(id) { $(id).classList.add("hidden"); }
 function elapsed() { return Math.max(0, Math.floor((Date.now() - startedAt) / 1000)); }
 function fmt(s) { return `${String(Math.floor(s/60)).padStart(2,"0")}:${String(s%60).padStart(2,"0")}`; }
 
+$("nickname").addEventListener("input", () => {
+  const value = $("nickname").value.trim();
+  if (containsProfanity(value)) {
+    $("entryError").textContent = "Ten login zawiera niedozwolone słowo. Wybierz inny pseudonim.";
+  } else {
+    $("entryError").textContent = "";
+  }
+});
+
 $("startBtn").addEventListener("click", async () => {
   $("entryError").textContent = "";
   nickname = $("nickname").value.trim().replace(/\s+/g, " ");
   if (nickname.length < 2) { $("entryError").textContent = "Wpisz login mający co najmniej 2 znaki."; return; }
+  if (containsProfanity(nickname)) {
+    $("entryError").textContent = "Ten login zawiera niedozwolone słowo. Wybierz inny pseudonim.";
+    $("nickname").focus();
+    return;
+  }
   $("startBtn").disabled = true;
   try {
     user = auth.currentUser || (await signInAnonymously(auth)).user;
