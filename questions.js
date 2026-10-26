@@ -1,9 +1,54 @@
-// Pytania demonstracyjne. Sprawdź je przed konkursem.
-// Klucz odpowiedzi jest widoczny w kodzie strony, więc wersja nadaje się do nieformalnego quizu.
+// Quiz edukacyjny o sarnie: pięć pytań, wyjaśnienie po każdej odpowiedzi.
+// Zdjęcia pochodzą z Wikimedia Commons; informacje o autorach i licencjach są w README.md.
 export const questions = [
-  { q: "Jak nazywa się samica sarny?", a: ["Łania", "Koza", "Jelonek", "Sarna rogata"], correct: 1 },
-  { q: "Jak nazywa się samiec sarny?", a: ["Kozioł", "Byk", "Baran", "Jeleń"], correct: 0 },
-  { q: "Jak nazywa się młode sarny?", a: ["Cielę", "Koźlę", "Jagnię", "Źrebię"], correct: 1 },
-  { q: "Do jakiej rodziny należy sarna?", a: ["Kotowate", "Psowate", "Jeleniowate", "Zającowate"], correct: 2 },
-  { q: "Czym żywi się sarna?", a: ["Wyłącznie rybami", "Roślinami, pędami i liśćmi", "Głównie owadami", "Wyłącznie korą"], correct: 1 }
+  {
+    id: "samica",
+    q: "Na zdjęciu widzisz dorosłą samicę sarny. Jak się nazywa?",
+    a: ["Łania", "Koza", "Kozioł", "Koźlę"],
+    correct: 1,
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Roe_Deer_-_Doe.jpg",
+    imageAlt: "Dorosła samica sarny na łące",
+    imageCaption: "Przyjrzyj się budowie i wyglądowi dorosłej sarny.",
+    explanation: "Samicę sarny nazywamy kozą. Łania to samica jelenia szlachetnego, a kozioł to samiec sarny."
+  },
+  {
+    id: "samiec",
+    q: "Jak nazywa się dorosły samiec sarny?",
+    a: ["Kozioł", "Byk", "Tryk", "Ogier"],
+    correct: 0,
+    explanation: "Dorosły samiec sarny to kozioł. Sarna i jeleń szlachetny są różnymi gatunkami, chociaż oba należą do rodziny jeleniowatych."
+  },
+  {
+    id: "tropy",
+    q: "Leśny detektyw: co najlepiej przedstawia ślad na zdjęciu?",
+    a: ["Trop zwierzęcia kopytnego", "Odcisk łapy lisa", "Ślad ptasiej stopy", "Odcisk ludzkiego buta"],
+    correct: 0,
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Deer_Hoofprint.jpg",
+    imageAlt: "Odcisk kopyta zwierzęcia na ziemi",
+    imageCaption: "Ślady na miękkim podłożu mogą pomóc rozpoznać, jakie zwierzętędy przechodziło.",
+    explanation: "To trop, czyli ślad pozostawiony przez zwierzę. Odciski racic mają charakterystyczny kształt; sam jeden trop nie zawsze pozwala pewnie ustalić gatunek."
+  },
+  {
+    id: "kozle",
+    q: "Widzisz samotnie leżące w trawie młode koźlę. Co najlepiej zrobić?",
+    a: [
+      "Zostawić je w spokoju i spokojnie odejść",
+      "Zabrać je do domu",
+      "Pogłaskać i nakarmić",
+      "Podejść bardzo blisko, by zrobić zdjęcie"
+    ],
+    correct: 0,
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Roe_deer_fawn_%283722435972%29.jpg",
+    imageAlt: "Młoda sarna ukryta w trawie",
+    imageCaption: "Młode może leżeć nieruchomo i czekać, aż wróci matka.",
+    explanation: "Nie dotykaj ani nie zabieraj koźlęcia — matka może żerować w oddaleniu i wrócić później. Jeśli zwierzę jest wyraźnie ranne lub znajduje się w bezpośrednim niebezpieczeństwie, powiedz dorosłemu, by skontaktował się z odpowiednimi służbami."
+  },
+  {
+    id: "pokarm",
+    q: "Prawda czy fałsz: sarna jest roślinożercą i zjada między innymi liście, pędy oraz zioła.",
+    a: ["Prawda", "Fałsz"],
+    correct: 0,
+    type: "truefalse",
+    explanation: "To prawda. Sarna jest roślinożerna; jej pokarm obejmuje między innymi liście, pąki, młode pędy i rośliny zielne. Dieta zmienia się wraz z porą roku."
+  }
 ];
