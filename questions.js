@@ -126,15 +126,16 @@ export const questions = [
   },
   {
     id: "oczodoly",
-    q: "Do czego służą oczodoły po bokach czaszki?",
-    a: ["Do rozcierania pokarmu", "Do wyrastania poroża", "Mieszczą i chronią narządy wzroku", "Łączą zęby z żuchwą"],
-    correct: 2,
+    q: "Prawda czy fałsz: oczodoły to miejsca w czaszce, w których znajdują się oczy.",
+    a: ["Prawda", "Fałsz"],
+    correct: 0,
+    type: "truefalse",
     image: "https://commons.wikimedia.org/wiki/Special:FilePath/Cr%C3%A2nio_de_cor%C3%A7a.jpg?width=1200",
     imageAlt: "Czaszka sarny z dużymi otworami oczodołów",
-    imageCaption: "Oczodoły są dużymi otworami po bokach czaszki.",
+    imageCaption: "Zwróć uwagę na duże otwory po bokach czaszki.",
     imageZoom: 1.55,
     imagePosition: "center 48%",
-    explanation: "Oczodoły to miejsca w czaszce, w których znajdują się gałki oczne i związane z nimi struktury."
+    explanation: "Prawda. Oczodoły mieszczą gałki oczne i związane z nimi struktury."
   },
   {
     id: "zuchwa",
