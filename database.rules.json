@@ -2,6 +2,7 @@
   "rules": {
     "submissions": {
       ".read": "auth != null && auth.token.email === 'alexanderslowik2013@gmail.com'",
+      ".write": "auth != null && auth.token.email === 'alexanderslowik2013@gmail.com'",
       "$uid": {
         ".read": "auth != null && auth.uid === $uid",
         ".write": "auth != null && auth.uid === $uid && !data.exists()",
