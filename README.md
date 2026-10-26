@@ -1,11 +1,11 @@
 # Quiz o sarnie — GitHub Pages + Firebase
 
-Quiz dla 17 uczestników; adres strony pozostaje bez zmian, więc wydrukowane wcześniej kody QR nadal prowadzą do quizu. Quiz ma 15 pytań: 10 o sarnie i jej życiu oraz 5 łatwych pytań o czaszce. Kolejność pytań i odpowiedzi jest losowana oddzielnie dla każdego uczestnika. W pytaniach o czaszkę pokazują się zdjęcia, zbliżenia i podpisy.
+Quiz dla 17 uczestników; adres strony pozostaje bez zmian, więc wydrukowane wcześniej kody QR nadal prowadzą do quizu. Quiz ma 15 pytań: 11 o sarnie i jej życiu oraz 4 łatwe pytania o czaszce. Kolejność pytań i odpowiedzi jest losowana oddzielnie dla każdego uczestnika. W pytaniach o czaszkę pokazują się zdjęcia, zbliżenia i podpisy. Dodatkowe pytanie „Prawda czy fałsz” dotyczy różnicy między sarną i jeleniem szlachetnym.
 
 ## Funkcje
 - 15 pytań z obrazkami, odpowiedziami wielokrotnego wyboru i pytaniami prawda/fałsz.
 - Zdjęcia sarny, tropu i młodego koźlęcia.
-- 5 łatwych pytań o czaszce ze zdjęciami: parostki, możdżeń, oczodoły, żuchwa i zęby policzkowe.
+- 4 łatwe pytania o czaszce ze zdjęciami: parostki, możdżeń, żuchwa i zęby policzkowe.
 - Kolejność pytań i wariantów odpowiedzi miesza się dla każdej próby; zapisana kolejność pozwala panelowi poprawnie liczyć wyniki i statystyki.
 - Wyjaśnienie edukacyjne po każdej odpowiedzi.
 - Odznaki: Mistrz leśnej wiedzy, Leśny ekspert, Leśny odkrywca, Tropiciel śladów i Przyjaciel sarny.
