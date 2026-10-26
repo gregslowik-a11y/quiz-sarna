@@ -203,8 +203,8 @@ $("nextBtn").addEventListener("click", async () => {
 function calculateAwards(quizOrder, answers, score) {
   const awards = [];
   if (score === quizOrder.length) awards.push("🏆 Mistrz leśnej wiedzy");
-  else if (score >= 10) awards.push("🌟 Leśny ekspert");
-  else if (score >= 7) awards.push("🌿 Leśny odkrywca");
+  else if (score >= 12) awards.push("🌟 Leśny ekspert");
+  else if (score >= 9) awards.push("🌿 Leśny odkrywca");
   else awards.push("🍃 Uczestnik leśnej wyprawy");
   const tracksIndex = quizOrder.findIndex(q => q.id === "tropy");
   const fawnIndex = quizOrder.findIndex(q => q.id === "kozle");
