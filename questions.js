@@ -38,7 +38,7 @@ export const questions = [
       "Podejść bardzo blisko, by zrobić zdjęcie"
     ],
     correct: 0,
-    image: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Roe_deer_fawn_%283722435972%29.jpg",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Roe_deer_fawn_%283722435972%29.jpg",
     imageAlt: "Młoda sarna ukryta w trawie",
     imageCaption: "Młode może leżeć nieruchomo i czekać, aż wróci matka.",
     explanation: "Nie dotykaj ani nie zabieraj koźlęcia — matka może żerować w oddaleniu i wrócić później. Jeśli zwierzę jest wyraźnie ranne lub znajduje się w bezpośrednim niebezpieczeństwie, powiedz dorosłemu, by skontaktował się z odpowiednimi służbami."
