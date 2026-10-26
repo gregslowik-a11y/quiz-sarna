@@ -5,7 +5,8 @@ Quiz dla 17 uczestników; adres strony pozostaje bez zmian, więc wcześniej wyd
 ## Funkcje
 - Strona uczestnika: pseudonim, pięć pytań, zdjęcia, informacja zwrotna po sprawdzeniu każdej odpowiedzi.
 - Odznaki: Mistrz leśnej wiedzy, Leśny ekspert, Leśny odkrywca, Tropiciel śladów i Przyjaciel sarny.
-- Panel prowadzącego: ranking, czas, średni wynik, najtrudniejsze pytanie, odsetek poprawnych odpowiedzi i eksport CSV.
+- Panel prowadzącego: ranking, czas, średni wynik, najtrudniejsze pytanie, odsetek poprawnych odpowiedzi, eksport CSV i przycisk do wyczyszczenia wszystkich wyników z podwójnym potwierdzeniem.
+- Usuwanie wyników wymaga reguły `.write` dla administratora w `database.rules.json`. Po zmianie tego pliku trzeba skopiować jego zawartość do Firebase Console → Realtime Database → Rules i kliknąć **Publish**.
 - Filtr popularnych niecenzuralnych loginów pozostaje aktywny.
 
 ## Pliki
@@ -17,7 +18,7 @@ Quiz dla 17 uczestników; adres strony pozostaje bez zmian, więc wcześniej wyd
 - `database.rules.json` — reguły Realtime Database.
 
 ## Ważne przed lekcją
-Ponieważ treść pytań została zmieniona, usuń stare próbne wyniki z węzła `submissions` w Firebase przed właściwym quizem. Dzięki temu statystyki pytań będą liczone wyłącznie dla nowej wersji. Nie usuwaj całej bazy ani konta administratora.
+Ponieważ treść pytań została zmieniona, usuń stare próbne wyniki przed właściwym quizem. Można to zrobić z panelu prowadzącego przyciskiem **Wyczyść wszystkie wyniki**. Wymagane jest potwierdzenie w oknie oraz wpisanie `USUŃ WYNIKI`. Operacja usuwa wszystkie wpisy w `submissions` i nie da się jej cofnąć. Nie usuwa całej bazy ani konta administratora.
 
 ## Zdjęcia i licencje
 - „Roe Deer - Doe.jpg” — Caroline Legg, Wikimedia Commons, CC BY 2.0: https://commons.wikimedia.org/wiki/File:Roe_Deer_-_Doe.jpg
