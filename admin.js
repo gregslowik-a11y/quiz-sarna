@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
-import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-database.js";
+import { getDatabase, ref, onValue, remove } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-database.js";
 import { firebaseConfig, ADMIN_EMAIL } from "./firebase-config.js";
 import { questions } from "./questions.js";
 
@@ -104,4 +104,41 @@ $("exportBtn").addEventListener("click", () => {
   const csv = [header,...data].map(row => row.map(v => `"${String(v ?? "").replaceAll('"','""')}"`).join(";")).join("\r\n");
   const blob = new Blob(["\ufeff"+csv], {type:"text/csv;charset=utf-8;"});
   const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "wyniki-quizu-sarna.csv"; a.click(); URL.revokeObjectURL(a.href);
+});
+
+
+$("clearResultsBtn").addEventListener("click", async () => {
+  $("clearStatus").textContent = "";
+  const currentUser = auth.currentUser;
+  if (!currentUser || !currentUser.email || currentUser.email.toLowerCase() !== ADMIN_EMAIL.toLowerCase()) {
+    $("clearStatus").textContent = "Ta czynność wymaga zalogowania na konto administratora.";
+    return;
+  }
+  if (rows.length === 0) {
+    $("clearStatus").textContent = "Nie ma wyników do usunięcia.";
+    return;
+  }
+
+  const accepted = window.confirm(`Czy na pewno usunąć wszystkie ${rows.length} zapisane wyniki? Ranking i statystyki zostaną wyczyszczone. Tej operacji nie można cofnąć.`);
+  if (!accepted) return;
+
+  const phrase = window.prompt('Aby potwierdzić usunięcie, wpisz dokładnie: USUŃ WYNIKI');
+  if (phrase !== "USUŃ WYNIKI") {
+    $("clearStatus").textContent = "Anulowano. Wyniki nie zostały usunięte.";
+    return;
+  }
+
+  const button = $("clearResultsBtn");
+  button.disabled = true;
+  button.textContent = "Usuwanie wyników…";
+  try {
+    await remove(ref(db, "submissions"));
+    $("clearStatus").textContent = "Wszystkie wyniki zostały usunięte. Panel i statystyki zostały wyczyszczone.";
+  } catch (e) {
+    console.error(e);
+    $("clearStatus").textContent = "Nie udało się usunąć wyników. Sprawdź, czy opublikowano aktualne reguły database.rules.json w Firebase.";
+  } finally {
+    button.disabled = false;
+    button.textContent = "Wyczyść wszystkie wyniki";
+  }
 });
