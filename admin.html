@@ -9,20 +9,29 @@
   <main class="shell wide">
     <header class="hero">
       <div class="eyebrow">PANEL PROWADZĄCEGO</div><h1>Quiz o sarnie</h1>
-      <p>Wyniki uczestników aktualizują się na bieżąco.</p>
+      <p>Wyniki na żywo, odznaki i podsumowanie wiedzy klasy.</p>
     </header>
     <section class="panel" id="loginPanel">
       <h2>Logowanie prowadzącego</h2>
       <label for="email">E-mail administratora</label><input id="email" type="email" autocomplete="username" placeholder="E-mail skonfigurowany w Firebase">
       <label for="password">Hasło</label><input id="password" type="password" autocomplete="current-password" placeholder="Hasło">
       <button id="loginBtn">Zaloguj</button><p id="loginError" class="error" role="alert"></p>
-      <p class="hint">Konto administratora utwórz w Firebase Authentication. Nie używaj hasła ucznia ani wspólnego hasła dla klasy.</p>
+      <p class="hint">Zaloguj się kontem administratora z Firebase Authentication.</p>
     </section>
     <section class="panel hidden" id="dashboard">
       <div class="dashboard-heading"><div><h2>Wyniki klasy</h2><p id="summary" class="hint">Oczekiwanie na zgłoszenia…</p></div><button class="secondary" id="logoutBtn">Wyloguj</button></div>
-      <div class="stats"><div><span id="count">0/17</span><small>ukończone testy</small></div><div><span id="topScore">—</span><small>najlepszy wynik</small></div><div><span id="winnerName">—</span><small>lider rankingu</small></div></div>
-      <div class="table-wrap"><table><thead><tr><th>#</th><th>Login</th><th>Punkty</th><th>Czas</th><th>Odpowiedzi (1–5)</th><th>Wysłano</th></tr></thead><tbody id="resultsBody"><tr><td colspan="6">Brak wyników.</td></tr></tbody></table></div>
+      <div class="stats stats-four">
+        <div><span id="count">0/17</span><small>ukończone testy</small></div>
+        <div><span id="averageScore">—</span><small>średni wynik</small></div>
+        <div><span id="topScore">—</span><small>najlepszy wynik</small></div>
+        <div><span id="winnerName">—</span><small>lider rankingu</small></div>
+      </div>
+      <h3>Ranking uczestników</h3>
+      <div class="table-wrap"><table><thead><tr><th>#</th><th>Login</th><th>Punkty</th><th>Czas</th><th>Odpowiedzi</th><th>Odznaki</th><th>Wysłano</th></tr></thead><tbody id="resultsBody"><tr><td colspan="7">Brak wyników.</td></tr></tbody></table></div>
       <p class="hint">Remis rozstrzyga krótszy czas. W przypadku identycznego wyniku i czasu kolejność jest alfabetyczna.</p>
+      <h3>Co sprawiło klasie największą trudność?</h3>
+      <p class="hint" id="hardestSummary">Podsumowanie pojawi się po pierwszych zgłoszeniach.</p>
+      <div class="table-wrap"><table><thead><tr><th>Pytanie</th><th>Poprawne odpowiedzi</th><th>Skuteczność</th></tr></thead><tbody id="questionStatsBody"><tr><td colspan="3">Brak danych.</td></tr></tbody></table></div>
       <button class="secondary" id="exportBtn">Pobierz CSV</button>
     </section>
     <footer>Wyniki są widoczne tylko dla zalogowanego administratora.</footer>
