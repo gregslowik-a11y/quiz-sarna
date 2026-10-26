@@ -24,11 +24,11 @@ Quiz dla 17 uczestników; adres strony pozostaje bez zmian, więc wydrukowane wc
 **Opublikuj zaktualizowane reguły Firebase.** Otwórz Firebase Console → Realtime Database → Rules. Skopiuj całą zawartość pliku `database.rules.json` z repozytorium, wklej ją do edytora reguł i kliknij **Publish**. Reguły muszą pozwalać na wynik do 12 punktów, `questionCount = 12` i zapisywanie 12 odpowiedzi. Jeśli pozostaną stare reguły na 5 pytań, wysyłanie wyników może być odrzucone.
 
 ## Przed właściwą lekcją
-Wyczyść stare wyniki z wersji 5-pytaniowej w panelu prowadzącego, używając przycisku **Wyczyść wszystkie wyniki**. Potwierdź ostrzeżenie i wpisz `USUŃ WYNIKI`. Dzięki temu ranking i statystyki dotyczą wyłącznie nowej wersji. Operacja jest nieodwracalna; nie usuwa całej bazy ani konta administratora.
+Wyczyść stare wyniki z wersji 12-pytaniowej w panelu prowadzącego, używając przycisku **Wyczyść wszystkie wyniki**. Potwierdź ostrzeżenie i wpisz `USUŃ WYNIKI`. Dzięki temu ranking i statystyki dotyczą wyłącznie nowej wersji. Operacja jest nieodwracalna; nie usuwa całej bazy ani konta administratora.
 
 ## Zdjęcia i licencje
 Zdjęcia do pytań o sarnie i jej czaszce są osadzone z Wikimedia Commons, a podpisy wskazują, co należy rozpoznać. Czaszka przedstawia Capreolus capreolus; zbliżenia są kadrowane w przeglądarce.
-- „Roe deer eating leaves in Tuntorp 2.jpg” — W.carter, Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Roe_deer_eating_leaves_in_Tuntorp_2.jpg
+- „Roe deer eating leaves in Tuntorp 2.jpg” — W.carter, CC0: https://commons.wikimedia.org/wiki/File:Roe_deer_eating_leaves_in_Tuntorp_2.jpg
 - „Roe deer buck in a clearing in Tuntorp, Brastad 1.jpg” — Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Roe_deer_buck_in_a_clearing_in_Tuntorp,_Brastad_1.jpg
 - „Roe deer antler.jpg” — V8powerage, CC BY-SA 4.0: https://commons.wikimedia.org/wiki/File:Roe_deer_antler.jpg
 
