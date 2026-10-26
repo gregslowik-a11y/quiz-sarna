@@ -21,7 +21,7 @@ Quiz dla 17 uczestników; adres strony pozostaje bez zmian, więc wydrukowane wc
 - `database.rules.json` — reguły Realtime Database.
 
 ## Ważne po zmianie na 15 pytań
-**Opublikuj zaktualizowane reguły Firebase.** Otwórz Firebase Console → Realtime Database → Rules. Skopiuj całą zawartość pliku `database.rules.json` z repozytorium, wklej ją do edytora reguł i kliknij **Publish**. Reguły muszą pozwalać na wynik do 12 punktów, `questionCount = 12` i zapisywanie 12 odpowiedzi. Jeśli pozostaną stare reguły na 5 pytań, wysyłanie wyników może być odrzucone.
+**Opublikuj zaktualizowane reguły Firebase.** Otwórz Firebase Console → Realtime Database → Rules. Skopiuj całą zawartość pliku `database.rules.json` z repozytorium, wklej ją do edytora reguł i kliknij **Publish**. Reguły muszą pozwalać na wynik do 15 punktów, `questionCount = 15` i zapisywanie 15 odpowiedzi. Jeśli pozostaną stare reguły na 12 pytań, wysyłanie wyników może być odrzucone.
 
 ## Przed właściwą lekcją
 Wyczyść stare wyniki z wersji 12-pytaniowej w panelu prowadzącego, używając przycisku **Wyczyść wszystkie wyniki**. Potwierdź ostrzeżenie i wpisz `USUŃ WYNIKI`. Dzięki temu ranking i statystyki dotyczą wyłącznie nowej wersji. Operacja jest nieodwracalna; nie usuwa całej bazy ani konta administratora.
@@ -30,16 +30,14 @@ Wyczyść stare wyniki z wersji 12-pytaniowej w panelu prowadzącego, używając
 Zdjęcia do pytań o sarnie i jej czaszce są osadzone z Wikimedia Commons, a podpisy wskazują, co należy rozpoznać. Czaszka przedstawia Capreolus capreolus; zbliżenia są kadrowane w przeglądarce.
 - „Roe deer eating leaves in Tuntorp 2.jpg” — W.carter, CC0: https://commons.wikimedia.org/wiki/File:Roe_deer_eating_leaves_in_Tuntorp_2.jpg
 - „Roe deer tracks on a muddy path in Tuntorp.jpg” — Ann-Sophie Qvarnström, CC BY-SA 4.0: https://commons.wikimedia.org/wiki/File:Roe_deer_tracks_on_a_muddy_path_in_Tuntorp.jpg
+- „Roe deer in morning mist Lower Havel Valley.jpg” — Saschox, CC BY 4.0: https://commons.wikimedia.org/wiki/File:Roe_deer_in_morning_mist_Lower_Havel_Valley.jpg
 - „Roe deer buck in a clearing in Tuntorp, Brastad 1.jpg” — Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Roe_deer_buck_in_a_clearing_in_Tuntorp,_Brastad_1.jpg
 - „Roe deer antler.jpg” — V8powerage, CC BY-SA 4.0: https://commons.wikimedia.org/wiki/File:Roe_deer_antler.jpg
 
 Zdjęcia czaszek i zębów pochodzą z Wikimedia Commons; niektóre przedstawiają czaszki innych jeleniowatych, więc służą jako ilustracja porównawcza, a nie dokładny model każdej kości sarny.
-- „Full deer skull.jpg” — Jbjensen1, CC BY 4.0: https://commons.wikimedia.org/wiki/File:Full_deer_skull.jpg
 - „Crânio de corça.jpg” — Cpls, CC BY-SA 4.0, czaszka sarny europejskiej: https://commons.wikimedia.org/wiki/File:Cr%C3%A2nio_de_cor%C3%A7a.jpg
-- „Deer Skull 176.jpg” — Chris Light, CC BY-SA 4.0, czaszka mulaka: https://commons.wikimedia.org/wiki/File:Deer_Skull_176.jpg
 
 - „Roe Deer - Doe.jpg” — Caroline Legg, Wikimedia Commons, CC BY 2.0: https://commons.wikimedia.org/wiki/File:Roe_Deer_-_Doe.jpg
-- „Deer Hoofprint.jpg” — MaryC2000, Wikimedia Commons, CC BY 4.0: https://commons.wikimedia.org/wiki/File:Deer_Hoofprint.jpg
 - „Roe deer fawn (3722435972).jpg” — Gilles San Martin, Wikimedia Commons, CC BY-SA: https://commons.wikimedia.org/wiki/File:Roe_deer_fawn_(3722435972).jpg
 
 ## Adresy
