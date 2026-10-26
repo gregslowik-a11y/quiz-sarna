@@ -29,6 +29,7 @@ Wyczyść stare wyniki z wersji 12-pytaniowej w panelu prowadzącego, używając
 ## Zdjęcia i licencje
 Zdjęcia do pytań o sarnie i jej czaszce są osadzone z Wikimedia Commons, a podpisy wskazują, co należy rozpoznać. Czaszka przedstawia Capreolus capreolus; zbliżenia są kadrowane w przeglądarce.
 - „Roe deer eating leaves in Tuntorp 2.jpg” — W.carter, CC0: https://commons.wikimedia.org/wiki/File:Roe_deer_eating_leaves_in_Tuntorp_2.jpg
+- „Roe deer tracks on a muddy path in Tuntorp.jpg” — Ann-Sophie Qvarnström, CC BY-SA 4.0: https://commons.wikimedia.org/wiki/File:Roe_deer_tracks_on_a_muddy_path_in_Tuntorp.jpg
 - „Roe deer buck in a clearing in Tuntorp, Brastad 1.jpg” — Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Roe_deer_buck_in_a_clearing_in_Tuntorp,_Brastad_1.jpg
 - „Roe deer antler.jpg” — V8powerage, CC BY-SA 4.0: https://commons.wikimedia.org/wiki/File:Roe_deer_antler.jpg
 
