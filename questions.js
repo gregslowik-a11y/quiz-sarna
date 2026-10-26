@@ -65,7 +65,7 @@ export const questions = [
     q: "Co przedstawia ślad na zdjęciu?",
     a: ["Odcisk ludzkiego buta", "Ślad ptasiej stopy", "Trop zwierzęcia kopytnego", "Odcisk łapy lisa"],
     correct: 2,
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Deer_Hoofprint.jpg?width=1200",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Roe_deer_tracks_on_a_muddy_path_in_Tuntorp.jpg?width=1200",
     imageAlt: "Trop racicy na miękkim podłożu",
     imageCaption: "Racice pozostawiają charakterystyczny ślad na ziemi lub śniegu.",
     explanation: "To trop zwierzęcia kopytnego. Ślad pomaga rozpoznać grupę zwierząt, ale czasem do ustalenia gatunku potrzebne są dodatkowe wskazówki."
