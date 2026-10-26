@@ -32,7 +32,12 @@
       <h3>Co sprawiło klasie największą trudność?</h3>
       <p class="hint" id="hardestSummary">Podsumowanie pojawi się po pierwszych zgłoszeniach.</p>
       <div class="table-wrap"><table><thead><tr><th>Pytanie</th><th>Poprawne odpowiedzi</th><th>Skuteczność</th></tr></thead><tbody id="questionStatsBody"><tr><td colspan="3">Brak danych.</td></tr></tbody></table></div>
-      <button class="secondary" id="exportBtn">Pobierz CSV</button>
+      <div class="admin-actions">
+        <button class="secondary" id="exportBtn">Pobierz CSV</button>
+        <button class="danger" id="clearResultsBtn">Wyczyść wszystkie wyniki</button>
+      </div>
+      <p id="clearStatus" class="hint" role="status" aria-live="polite"></p>
+      <p class="hint">Uwaga: wyczyszczenie usuwa wszystkie zapisane zgłoszenia i statystyki. Tej czynności nie można cofnąć.</p>
     </section>
     <footer>Wyniki są widoczne tylko dla zalogowanego administratora.</footer>
   </main>
