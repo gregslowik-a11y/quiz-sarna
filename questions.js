@@ -125,17 +125,15 @@ export const questions = [
     explanation: "Możdżeń to kostny wyrostek kości czołowej, na którym rozwija się poroże."
   },
   {
-    id: "oczodoly",
-    q: "Prawda czy fałsz: oczodoły to miejsca w czaszce, w których znajdują się oczy.",
+    id: "sarna-a-jelen",
+    q: "Prawda czy fałsz: sarna i jeleń szlachetny to ten sam gatunek.",
     a: ["Prawda", "Fałsz"],
-    correct: 0,
+    correct: 1,
     type: "truefalse",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Cr%C3%A2nio_de_cor%C3%A7a.jpg?width=1200",
-    imageAlt: "Czaszka sarny z dużymi otworami oczodołów",
-    imageCaption: "Zwróć uwagę na duże otwory po bokach czaszki.",
-    imageZoom: 1.55,
-    imagePosition: "center 48%",
-    explanation: "Prawda. Oczodoły mieszczą gałki oczne i związane z nimi struktury."
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/ec/Roe_Deer_-_Doe.jpg",
+    imageAlt: "Dorosła sarna europejska na łące",
+    imageCaption: "Sarna i jeleń szlachetny należą do tej samej rodziny, ale są różnymi gatunkami.",
+    explanation: "Fałsz. Sarna europejska i jeleń szlachetny to dwa różne gatunki należące do rodziny jeleniowatych."
   },
   {
     id: "zuchwa",
