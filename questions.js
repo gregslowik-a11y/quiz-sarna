@@ -65,11 +65,11 @@ export const questions = [
     explanation: "Możdżeń to kostny wyrostek kości czołowej, na którym rozwija się poroże."
   },
   {
-    id: "mozgoczaszka",
-    q: "Który element czaszki otacza i chroni mózg?",
-    a: ["Mózgoczaszka", "Kości nosowe", "Żuchwa", "Zęby policzkowe"],
+    id: "koscinosowe",
+    q: "Które kości tworzą górną część okolicy nosa w przedniej, wydłużonej części czaszki?",
+    a: ["Kości nosowe", "Kości potyliczne", "Żuchwa", "Zęby policzkowe"],
     correct: 0,
-    explanation: "Mózgoczaszka tworzy ochronną część czaszki, w której znajduje się mózg."
+    explanation: "Kości nosowe leżą z przodu czaszki i tworzą górną część okolicy nosa, osłaniając część jamy nosowej."
   },
   {
     id: "oczodoly",
@@ -91,11 +91,16 @@ export const questions = [
     explanation: "Żuchwa jest ruchomą kością dolnej części pyska. Znajdują się w niej dolne siekacze i zęby policzkowe."
   },
   {
-    id: "poroże",
-    q: "Z jakiej tkanki zbudowane jest poroże sarny?",
-    a: ["Z tkanki kostnej", "Z keratyny jak pazury", "Z zębiny", "Z chrząstki przez całe życie"],
+    id: "szczeka-gorna",
+    q: "Które zdanie o górnej szczęce sarny jest prawdziwe?",
+    a: [
+      "Z przodu nie ma siekaczy; współpracuje z dolnymi siekaczami i poduszką dziąsłową",
+      "Ma taki sam zestaw siekaczy jak żuchwa",
+      "Jest ruchomą kością dolnej części pyska",
+      "To część czaszki, z której wyrasta poroże"
+    ],
     correct: 0,
-    explanation: "Poroże jest strukturą kostną. Nie jest tym samym co stałe rogi zbudowane z kostnego rdzenia pokrytego keratyną."
+    explanation: "U jeleniowatych z przodu górnej szczęki nie ma siekaczy. Rośliny odgryzają dolnymi siekaczami opartymi o twardą poduszkę dziąsłową."
   },
   {
     id: "zeby",
